@@ -12,9 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('blog/home');
+    return view('welcome');
 });
 
-Route::get('/banana',function () {
-	echo 'teste';
-} );
+Route::get('/','PagesController@getHome');
+
+Route::get('about','PagesController@getAbout');
+
+Route::get('contact','PagesController@getContact');
+
